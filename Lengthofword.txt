@@ -1,0 +1,21 @@
+import java.util.*;
+class Lengthofword{
+public static void main(String str[]){
+String a;
+Scanner s=new Scanner(System.in);
+System.out.println("Enter the string : ");
+a=s.nextLine();
+int n=a.length();
+char x;
+int c=0,i=n;
+while (!Character.isWhitespace(x)){
+x=a[i];
+i--;
+c++;
+}
+System.out.println("The length of the last word is " + c);
+}
+}
+
+
+

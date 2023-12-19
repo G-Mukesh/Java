@@ -1,21 +1,33 @@
 import java.util.*;
 class Remove{
 public static void main(String str[]){
-String st1,st2;
+
+int n,k=0;
+int arr[]=new int[20];
 Scanner s=new Scanner(System.in);
-System.out.println("Enter the String");
-st1=s.nextLine();
-int n=st1.length();
-int j=0;
+System.out.println("Enter the no.of elements in array : ");
+n=s.nextInt();
 for(int i=0;i<n;i++){
-if(st[i]=="a" || st1[i]=="e" || st1[i]=="i" || st1[i]=="o" || st1[i]=="u"){
-st2=st2+"";
-j++;
+System.out.println("\nElement : " + i);
+arr[i]=s.nextInt();
+
 }
-else{
-st2=st2+st1[i];
+int newarr[]=new int[n];
+for(int i=0;i<n;i++){
+int c=0;
+for(int j=0;j<k;j++){
+if(newarr[j]==arr[i]){
+c++;
 }
 }
-System.out.println("String after remoing the vowels : "+st2);
+if(c==0){
+newarr[k]=arr[i];
+k++;
+}
+}
+System.out.println("The elements afte removal of duplicate elements \n");
+for(int i=0;i<k;i++){
+System.out.print(newarr[i]+" ");
+}
 }
 }
